@@ -1,5 +1,7 @@
 def add_item(inventory, item):
     inv = inventory()
+    if inv["locked"]:
+        return inv
     if len(inv["items"]) == inv["capacity"]:
         raise ValueError
     if item == "":
