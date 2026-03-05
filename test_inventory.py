@@ -11,3 +11,13 @@ def locked_inventory():
 def test_add_item_empty():
     item = "item"
     assert add_item(empty_inventory, item)["items"][0] == item
+
+def test_add_item_full():
+    item = "item"
+    with pytest.raises(ValueError):
+        add_item(full_inventory, item)
+
+def test_add_item_locked():
+    item = "item"
+    assert item in add_item(locked_inventory, item)["items"] == False
+
