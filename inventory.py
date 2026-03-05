@@ -1,5 +1,7 @@
 def add_item(inventory, item):
-    pass
+    inv = inventory()
+    inv["items"].append(item)
+    return inv
 
 def remove_item(inventory, item):
     pass
