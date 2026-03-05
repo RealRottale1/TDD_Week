@@ -21,3 +21,15 @@ def test_add_item_locked():
     item = "item"
     assert item not in add_item(locked_inventory, item)["items"]
 
+def test_remove_item_empty():
+    item = "sword"
+    with pytest.raises(ValueError):
+        remove_item(empty_inventory, item)
+
+def test_remove_item_full():
+    item = "a"
+    assert len(remove_item(full_inventory, item)["items"]) == 9
+
+def test_remove_item_locked():
+    item = "sword"
+    assert item in remove_item(locked_inventory, item)["items"]

@@ -10,7 +10,14 @@ def add_item(inventory, item):
     return inv
 
 def remove_item(inventory, item):
-    pass
+    inv = inventory()
+    if item not in inv["items"]:
+        raise ValueError
+    if inv["locked"]:
+        return inv
+    inv["items"].remove(item)
+    return inv
+
 
 def get_item_count(inventory):
     pass
