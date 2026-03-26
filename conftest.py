@@ -1,5 +1,6 @@
 import pytest
 
+
 @pytest.fixture
 def player():
     return {"health": 100, "max_health": 100, "alive": True}
@@ -29,7 +30,7 @@ def empty_inventory():
 def full_inventory():
     return {"items": ["a"] * 10, "capacity": 10, "locked": False}
 
+
 @pytest.fixture
 def locked_inventory():
     return {"items": ["sword"], "capacity": 10, "locked": True}
-
