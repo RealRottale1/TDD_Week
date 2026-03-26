@@ -5,16 +5,16 @@ def game():
 
 
 def test_add_points():
-    assert add_points(game, 1)["score"] is 1
+    assert add_points(game, 1)["score"] == 1
 
 
 def test_apply_multiplier():
-    assert apply_multiplier(game, 2)["multiplier"] is 2
+    assert apply_multiplier(game, 2)["multiplier"] == 2
 
 
 def test_reset_score():
-    assert reset_score(game)["score"] is 0
-    assert reset_score(game)["multiplier"] is 1
+    assert reset_score(game)["score"] == 0
+    assert reset_score(game)["multiplier"] == 1
 
 
 def test_is_high_score():
