@@ -1,5 +1,5 @@
 import pytest
-from inventory import add_item, remove_item, get_item_count
+from inventory import add_item, remove_item
 
 
 def empty_inventory():
