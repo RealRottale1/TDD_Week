@@ -16,7 +16,7 @@ def apply_multiplier(game, multiplier):
         return results
     results["multiplier"] = multiplier
     return results
-    
+
 
 def reset_score(game):
     results = game()
