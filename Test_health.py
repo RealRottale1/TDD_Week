@@ -39,10 +39,12 @@ def test_heal_increases_health():
     result = heal(player, 20)
     assert result["health"] == 80
 
+
 def test_heal_cannot_exceed_max_health():
     player = make_player(health=90)
     result = heal(player, 50)
     assert result["health"] == 100
+
 
 def test_heal_does_nothing_when_dead():
     player = make_player(health=0, alive=False)
