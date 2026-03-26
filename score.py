@@ -7,6 +7,7 @@ def add_points(game, amount):
     results["score"] += amount * results["multiplier"]
     return results
 
+
 def apply_multiplier(game, multiplier):
     if multiplier < 1:
         raise ValueError
@@ -22,6 +23,7 @@ def reset_score(game):
     results["score"] = 0
     results["multiplier"] = 1
     return results
+
 
 def is_high_score(game, threshold):
     if threshold < 0:
