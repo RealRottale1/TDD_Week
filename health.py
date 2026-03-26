@@ -1,8 +1,6 @@
-import pytest 
-
 def take_damage(player, amount):
     player["health"] = max(0, player["health"] - amount)
-    if player["health"] == 0:
+    if player["health"] is 0:
         player["alive"] = False
     return player
 
